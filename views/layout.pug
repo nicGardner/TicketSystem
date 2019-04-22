@@ -1,0 +1,31 @@
+//- /*
+//- File Name: layout.pug
+//- Author: Jakub Sykora Nicholas Gardner
+//- Website: https://ticketsystem2106.herokuapp.com/
+//- Description: view for the layout partial page
+//- */
+
+doctype html
+html
+  head
+    title= title
+    //-script(src="javascripts/toggle.js")
+    script(src="javascripts/ticketBuilder.js")
+    link(rel='stylesheet', type='text/css', href='stylesheets/bootstrap.css')
+  body
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+      .container
+        a.navbar-brand.text-white Ticket Management System
+        div.collapse.navbar-collapse
+          ul.navbar-nav
+            li.nav-item
+              a.nav-link(href='/') Home
+            li.nav-item
+              a.nav-link(href='/dashboard') Ticket Dashboard
+            li.nav-item
+              a.nav-link(href='/register') Register
+            li.nav-item
+              a.nav-link(href='/login') Login
+            li.nav-item
+              a.nav-link(href='/logout') Logout
+    block content
